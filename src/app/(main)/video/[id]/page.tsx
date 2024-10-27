@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import VideoCard from "../../_components/VideoCard";
 import { useCallback, useEffect, useState } from "react";
 import { video } from "../../_components/VideoSearch";
