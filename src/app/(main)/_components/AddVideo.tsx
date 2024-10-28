@@ -73,7 +73,6 @@ export const AddVideo = () => {
           name="title"
           onChange={handleChange}
           value={video.title}
-          className=" border-muted-foreground"
         />
         <Input
           type="text"
@@ -81,7 +80,6 @@ export const AddVideo = () => {
           name="url"
           value={video.url}
           onChange={handleChange}
-          className=" border-muted-foreground"
           required
         />
         <Input
@@ -90,7 +88,6 @@ export const AddVideo = () => {
           name="description"
           onChange={handleChange}
           value={video.description}
-          className=" border-muted-foreground"
           required
         />
 
@@ -100,7 +97,6 @@ export const AddVideo = () => {
           name="category"
           value={video.category}
           onChange={handleChange}
-          className=" border-muted-foreground"
           required
         />
         <div>Thumbnail</div>
@@ -110,7 +106,6 @@ export const AddVideo = () => {
           placeholder="Thumbnail"
           name="thumbnail"
           onChange={handleChageTumbnail}
-          className=" border-muted-foreground"
           ref={ref}
           required
         />

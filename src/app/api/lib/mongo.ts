@@ -6,7 +6,7 @@ export const connectDB = async() => {
         console.log(`Mongo Connected ${conn}`);}
 
     else return null
-    } catch (error :any) {
-        throw new Error (error.message)
+    } catch (error ) {
+        throw new Error ("MONGODB_URI is not set")
     }
 };

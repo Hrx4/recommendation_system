@@ -74,9 +74,10 @@ export const VideoSearch = () => {
     <div className=" w-1/2">
       <div className="flex items-center justify-center gap-x-4">
         <Input
+          type="text"
+          placeholder="Title"
+          name="title"
           onChange={handleChange}
-          placeholder="Search"
-          className=" border-muted-foreground/60"
         />
         <Button
           onClick={handleSearch}

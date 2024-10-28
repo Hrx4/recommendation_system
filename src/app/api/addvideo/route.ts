@@ -50,10 +50,10 @@ export async function POST(req: NextRequest) {
       category,
     });
     return NextResponse.json(createdVideo, { status: 201 });
-  } catch (error: any) {
+  } catch (error) {
     console.error(error);
 
     // Return error response
-    return NextResponse.json({ message: 'Server error', error: error.message }, { status: 500 });
+    return NextResponse.json({ message: 'Server error', error: error }, { status: 500 });
   }
 }

@@ -1,23 +1,8 @@
-import * as React from "react";
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+export const Card = (({...props }) => (
   <div
-    ref={ref}
     className={
       "rounded-lg border bg-card text-card-foreground shadow-sm"}
     {...props}
   />
 ));
-Card.displayName = "Card";
-
-
-
-
-
-
-export {
-  Card,
-};

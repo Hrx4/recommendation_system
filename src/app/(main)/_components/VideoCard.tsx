@@ -14,7 +14,7 @@ export default function VideoCard({
   thumbnail,
 }: VideoCardProps) {
   return (
-    <Card className="w-full max-w-md flex bg-slate-800 items-start gap-4 border-2 border-muted-foreground/30">
+    <Card >
       <Link
         href={{pathname:`/video/${id}`}}
         className="flex-shrink-0 relative block w-[120px] h-[90px] rounded-md overflow-hidden p-4"
