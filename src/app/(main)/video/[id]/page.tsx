@@ -1,21 +1,18 @@
 "use client";
 
 import VideoCard from "../../_components/VideoCard";
-import { useCallback, useEffect, useState } from "react";
+import { use, useCallback, useEffect, useState } from "react";
 import { video } from "../../_components/VideoSearch";
 
-const Page = ({
-  params,
-}: {
-  params: {
-    id: string;
-  };
-}) => {
+type Params = Promise<{ id: string }>
+
+
+const Page = (props: { params: Params }) => {
 //   const video = useQuery(api.videos.getVideo, {
 //     id: params.id as Id<"videos">,
 //   });
 // const router = useRouter()
-
+const params = use(props.params);
 
   const [videos, setVideos] = useState<video[]>([]);
   const [video, setVideo] = useState<video>();
