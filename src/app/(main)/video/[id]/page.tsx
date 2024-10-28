@@ -3,6 +3,7 @@
 import VideoCard from "../../_components/VideoCard";
 import { use, useCallback, useEffect, useState } from "react";
 import { video } from "../../_components/VideoSearch";
+import { backend } from "@/app/api/lib/backend";
 
 type Params = Promise<{ id: string }>
 
@@ -20,7 +21,7 @@ const params = use(props.params);
 
   const handleCurrentVideo = useCallback(
     async () => {
-        await fetch(`http://192.168.137.1:3000/api/allvideos/${params.id}`, {
+        await fetch(`${backend}api/allvideos/${params.id}`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

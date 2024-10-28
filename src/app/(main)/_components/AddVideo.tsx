@@ -1,4 +1,5 @@
 "use client";
+import { backend } from "@/app/api/lib/backend";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useRef, useState } from "react";
@@ -42,7 +43,7 @@ export const AddVideo = () => {
     if(video.thumbnail)data.append("thumbnail", video.thumbnail);
     else return;
     data.append("category", video.category);
-    await fetch("http://192.168.137.1:3000/api/addvideo/", {
+    await fetch(`${backend}api/addvideo/`, {
       method: "POST",
       body: data,
     })

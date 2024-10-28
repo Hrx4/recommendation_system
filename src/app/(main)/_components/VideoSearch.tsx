@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useCallback, useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
+import { backend } from "@/app/api/lib/backend";
 
 export interface video {
   _id: string;
@@ -26,7 +27,7 @@ export const VideoSearch = () => {
       return;
     }
     setLoading(true)
-    await fetch("http://192.168.137.1:3000/api/query/", {
+    await fetch(`${backend}api/query/`, {
         method: "POST",
         body: JSON.stringify({ videoQuery: search }),
         headers: {
@@ -46,7 +47,7 @@ export const VideoSearch = () => {
   const allVideos = useCallback(
     async()=>{
       setLoading(true)
-        await fetch("http://192.168.137.1:3000/api/allvideos/", {
+        await fetch(`${backend}api/allvideos/`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

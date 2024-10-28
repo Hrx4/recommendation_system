@@ -1,0 +1,1 @@
+export const backend = "https://recommendation-system-ba2m8l9sq-hrx4s-projects.vercel.app/"
