@@ -73,7 +73,7 @@ const Page = ({
           {videos?.length > 0 &&
             videos
               .slice(1)
-              .map((video, index) => (
+              .map((video) => (
                 <VideoCard
                   key={video._id}
                   id={video?._id}

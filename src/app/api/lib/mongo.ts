@@ -7,6 +7,7 @@ export const connectDB = async() => {
 
     else return null
     } catch (error ) {
+        console.log(error)
         throw new Error ("MONGODB_URI is not set")
     }
 };
