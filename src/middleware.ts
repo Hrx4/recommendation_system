@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
  
-const allowedOrigins = ["https://recommendation-system-ba2m8l9sq-hrx4s-projects.vercel.app/"]
+const allowedOrigins = ["https://recommendation-system-ba2m8l9sq-hrx4s-projects.vercel.app/" , "https://recommendation-system-mu.vercel.app/" , "https://recommendation-system-git-main-hrx4s-projects.vercel.app/" , "https://recommendation-system-hrx4s-projects.vercel.app/"]
  
 const corsOptions = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
